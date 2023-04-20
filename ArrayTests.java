@@ -4,15 +4,17 @@ import org.junit.*;
 public class ArrayTests {
 	@Test 
 	public void testReverseInPlace() {
-    int[] input1 = { 3 };
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{ 3 }, input1);
+    int[] input = {3,4,5};
+    int[] reversedInput = {5,4,3};
+    ArrayExamples.reverseInPlace(input);
+    assertArrayEquals(new int[]{5,4,3},reversedInput);
 	}
 
 
   @Test
   public void testReversed() {
-    int[] input1 = { };
-    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+    int[] input1 = {4,3,2};
+    System.out.print(ArrayExamples.reversed(input1));
+    assertArrayEquals(new int[]{2,3,4}, ArrayExamples.reversed(input1));
   }
 }
